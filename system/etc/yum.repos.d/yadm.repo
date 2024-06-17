@@ -1,0 +1,7 @@
+[yadm]
+enabled=0
+baseurl=https://download.opensuse.org/repositories/home:/TheLocehiliosan:/yadm/Fedora_$releasever/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/home:/TheLocehiliosan:/yadm/Fedora_$releasever/repodata/repomd.xml.key
+name=Yet Another Dotfiles Manager
+type=rpm-md
