@@ -5,8 +5,8 @@ ARG SOURCE_TAG="latest"
 
 FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
-COPY --link system /
-COPY --link build /tmp/build
+COPY system /
+COPY build /tmp/build
 
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
