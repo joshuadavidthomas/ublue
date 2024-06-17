@@ -16,7 +16,4 @@ COPY build /tmp/build
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 RUN mkdir -p /var/lib/alternatives && \
   /tmp/build/build.sh && \
-  rm -rf /tmp/* /var/* && \
-  mkdir -p /var/tmp && \
-  chmod -R 1777 /var/tmp && \
   ostree container commit
