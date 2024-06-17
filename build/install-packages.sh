@@ -17,3 +17,5 @@ rpm-ostree install \
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/1password.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/vivaldi.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/wezterm-nightly.repo
+
+echo 'HELLOOOOOOOOOOOO'
