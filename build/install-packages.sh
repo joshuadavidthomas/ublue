@@ -10,16 +10,15 @@ curl -Lo /etc/yum.repos.d/wezterm-nightly.repo https://copr.fedorainfracloud.org
 sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/wezterm-nightly.repo
 
 # rpm-ostree install 1password
-# echo 'hello after 1pass'
 # rpm-ostree install 1password-cli
-# echo 'hello after op'
 # rpm-ostree install vivali
-# echo 'hello after vivaldi'
-rpm-ostree install wezterm
-echo 'hello after wezterm'
+# NOTES:
+# - zlib-ng-compat: needed for python installation on Fedora 40
+#   https://fedoraproject.org/wiki/Changes/ZlibNGTransition
+rpm-ostree install \
+        wezterm \
+        zlib-ng-compat
 
 # sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/1password.repo
 # sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/vivaldi.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/wezterm-nightly.repo
-
-echo 'HELLOOOOOOOOOOOO'
