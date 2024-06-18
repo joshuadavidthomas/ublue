@@ -13,11 +13,13 @@ sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/wezterm-nightly.repo
 # rpm-ostree install 1password-cli
 # rpm-ostree install vivali
 # NOTES:
-# - zlib-ng-compat: needed for python installation on Fedora 40
+# - zlib-ng-compat & zlib-ng-compat-devel:
+#   needed for python installation on Fedora 40
 #   https://fedoraproject.org/wiki/Changes/ZlibNGTransition
 rpm-ostree install \
         wezterm \
-        zlib-ng-compat
+        zlib-ng-compat \
+        zlib-ng-compat-devel
 
 # sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/1password.repo
 # sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/vivaldi.repo
