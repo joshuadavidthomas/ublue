@@ -11,8 +11,11 @@ sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/wezterm-nightly.repo
 #   needed for python installation on Fedora 40
 #   https://fedoraproject.org/wiki/Changes/ZlibNGTransition
 rpm-ostree install \
+        keyd \
         wezterm \
         zlib-ng-compat \
         zlib-ng-compat-devel
+
+systemctl enable keyd
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/wezterm-nightly.repo
