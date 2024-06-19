@@ -9,11 +9,13 @@ sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/keyd.repo
 sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/wezterm-nightly.repo
 
 # NOTES:
-# - zlib-ng-compat & zlib-ng-compat-devel:
-#   needed for python installation on Fedora 40
-#   https://fedoraproject.org/wiki/Changes/ZlibNGTransition
+# - openssl-devel, zlib-ng-compat, & zlib-ng-compat-devel:
+#   - needed for python installation on Fedora 40
+#     https://fedoraproject.org/wiki/Changes/ZlibNGTransition
+#   - not sure why openssl is missing?
 rpm-ostree install \
         keyd \
+        openssl-devel \
         wezterm \
         zlib-ng-compat \
         zlib-ng-compat-devel
