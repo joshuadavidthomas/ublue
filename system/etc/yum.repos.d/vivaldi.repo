@@ -1,6 +1,6 @@
 [vivaldi]
 baseurl=https://repo.vivaldi.com/archive/rpm/$basearch
-enabled=0
+enabled=1
 gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-vivaldi
+gpgkey=https://repo.vivaldi.com/archive/linux_signing_key.pub
 name=vivaldi

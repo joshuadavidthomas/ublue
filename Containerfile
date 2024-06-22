@@ -20,3 +20,6 @@ RUN mkdir -p /var/lib/alternatives \
   && mkdir -p /var/tmp \
   && chmod -R 1777 /var/tmp \
   && ostree container commit
+
+RUN rpm-ostree install vivaldi \
+  && ostree container commit
