@@ -48,4 +48,4 @@ sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/wezterm-nightly.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/yadm.repo
 
 curl -Lo /tmp/vivaldi.rpm https://downloads.vivaldi.com/stable/vivaldi-stable-6.8.3381.46-1.x86_64.rpm
-rpm-ostree install /tmp/vivaldi.rpm
+rpm -Uvh /tmp/vivaldi.rpm
