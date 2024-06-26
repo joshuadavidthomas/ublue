@@ -47,5 +47,7 @@ sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/keyd.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/wezterm-nightly.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/yadm.repo
 
+curl -Lo /tmp/vivaldi_linux_signing_key.pub http://repo.vivaldi.com/snapshot/linux_signing_key.pub
+rpm --import /tmp/vivaldi_linux_signing_key.pub
 curl -Lo /tmp/vivaldi.rpm https://downloads.vivaldi.com/stable/vivaldi-stable-6.8.3381.46-1.x86_64.rpm
 rpm -Uvh /tmp/vivaldi.rpm
